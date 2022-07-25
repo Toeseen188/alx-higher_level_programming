@@ -1,0 +1,121 @@
+========================
+``0-add-integer`` module
+========================
+
+Tests on `add_integer` function
+
+Importing function from module
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Numbers
+=======
+`add_integer()` returns the additions of its arguments, it is equivalent
+to using `+` between numbers
+
+Now use it,
+::
+	>>> add_integer(5, 7)
+	12
+
+	>>> add_integer(5.34, 100)
+	105
+	
+	>>> add_integer(5)
+	103
+
+	>>> add_integer(0)
+	98
+
+	>>> add_integer(-98)
+	0
+
+	>>> add_integer(-3.4, 5.49)
+	2
+
+	>>> add_integer(5, -200.6)
+	-195
+
+	>>> add_integer(0, 0)
+	0
+	
+	>>> add_integer(0.0, 0.0)
+	0
+	
+TypeError
+==========
+``add_integer` print a TypeError if one or both of the arguments is not int
+or float
+
+let's see,
+
+::
+	>>> add_integer(17, None)
+	Traceback (most recent call last):
+	 ...
+	TypeError: b must be an integer
+
+	>>> add_integer(None, 90)
+	Traceback (most recent call last):
+ 	 ...
+	TypeError: a must be an integer
+
+	>>> add_integer("name", 89)
+	Traceback (most recent call last):
+	 ...
+	TypeError: a must be an integer
+
+	>>> add_integer(100, 'a')
+	Traceback (most recent call last):
+	 ...
+	TypeError: b must be an integer
+
+	>>> add_integer('3', 3)
+	Traceback (most recent call last):
+	 ...
+	TypeError: a must be an integer
+
+	>>> add_integer("name")
+	Traceback (most recent call last):
+	 ...
+	TypeError: a must be an integer
+
+NameError and OverflowError
+============================
+``add_integer`` function give NameError if name is not defined 
+and OverflowError if argument is out of bound
+
+Tests
+=====
+::
+
+	>>> add_integer(a, 90)
+	Traceback (most recent call last):
+	 ...
+	NameError: name 'a' is not defined
+
+	>>> add_integer(4003, b)
+	Traceback (most recent call last):
+	 ...
+	NameError: name 'b' is not defined
+
+	>>> add_integer(1e700, 34)
+	Traceback (most recent call last):
+	 ...
+	OverflowError: cannot convert float infinity to integer
+
+SyntaxError
+===========
+``add_integer`` give a SyntaxError if inappropriate symbol is 
+given as argument
+
+
+::
+	>>> add_integer(., 9)
+	Traceback (most recent call last):
+	...
+	SyntaxError: invalid syntax
+
+	>> add_integer(92, **)
+	Traceback (most recent call last):
+	...
+	SyntaxError: invalid syntax
