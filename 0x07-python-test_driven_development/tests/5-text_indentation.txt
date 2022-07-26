@@ -1,0 +1,42 @@
+===================================
+Test on ``test_indentation(test)``
+===================================
+
+
+import module
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+Working
+========
+::
+
+	>>> text_indentation("who want to be a millionaire?")
+	who want to be a millionaire?
+	<BLANKLINE>
+
+	>>> text_indentation("123? 345. 787,1")
+	123?
+	<BLANKLINE>
+	345.
+	<BLANKLINE>
+	787,1
+
+	>>> text_indentation("Alx-Africa. School? How are you:    John")
+	Alx-Africa.
+	<BLANKLINE>
+	School?
+	<BLANKLINE>
+	How are you:
+	<BLANKLINE>
+	John
+
+	>>> text_indentation(190)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+
+	>>> text_indentation()
+	Traceback (most recent call last):
+	...
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
