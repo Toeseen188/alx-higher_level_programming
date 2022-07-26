@@ -3,7 +3,7 @@
 
 
 class LockedClass():
-    """ this __slot__ prevent dynamic creation of 
+    """ this __slot__ prevent dynamic creation of
     instances """
 
     __slots__ = ['first_name']
