@@ -3,6 +3,6 @@
 
 
 class Rectangle():
-    """ the keyword pass is needed for the 
+    """ the keyword pass is needed for the
     creation """
     pass
