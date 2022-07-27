@@ -17,6 +17,10 @@ def add_integer(a, b=98):
         into an int
 
     """
+    if a != a:
+        a = 89
+    if b != b:
+        b = 89
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
     elif not isinstance(b, (int, float)):
