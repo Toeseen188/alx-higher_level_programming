@@ -2,7 +2,7 @@
 """ A doc """
 
 
-def say_my_name(first_name, last_name=""):
+def say_my_name(first_name="", last_name=""):
     """ this function print first_name and last_name
     as strings only.
     it gives an error if any other type is supplied
