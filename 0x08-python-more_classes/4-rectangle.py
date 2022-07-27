@@ -80,4 +80,4 @@ class Rectangle:
     def __rep__(self):
         """ return a representative instance of string to be
         to use eval """
-        return("Rectangle({:d}, {:d})".format(self.__width, self.__height))
+        return "Rectangle({self.__width}, {self.__height})"
