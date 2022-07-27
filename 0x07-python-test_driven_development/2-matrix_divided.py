@@ -3,10 +3,10 @@
 
 
 def matrix_divided(matrix, div):
-    """ this function divide each item of 
+    """ this function divide each item of
     a matrix by div.
     matrix must not be empty and must be a list.
-    div must not be 0, otherwise a ZeroDivisionError is 
+    div must not be 0, otherwise a ZeroDivisionError is
     give.
 
     Args:
@@ -34,9 +34,5 @@ def matrix_divided(matrix, div):
         for item in row:
             if not isinstance(item, (int, float)):
                 raise TypeError("matrix must be a matrix (list of lists) "
-                                    "of integers/floats")
+                                "of integers/floats")
     return[[round(item / div, 2) for item in row] for row in matrix]
-
-
-
-
