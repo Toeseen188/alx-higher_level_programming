@@ -11,7 +11,7 @@ if __name__ == "__main__":
         lst = save_to_json_file("add_item.json")
     except Exception:
         pass
-    lst = []
+        lst = []
 
     for av in argv[1:]:
         lst.append(av)
