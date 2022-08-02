@@ -12,6 +12,7 @@ if __name__ == "__main__":
     except Exception:
         pass
     lst = []
-   
-    lst.extend(argv[1:])
+
+    for av in argv[1:]:
+        lst.append(av)
     save_to_json_file(lst, "add_item.json")
