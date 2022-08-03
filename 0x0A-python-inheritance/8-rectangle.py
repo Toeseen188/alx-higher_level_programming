@@ -20,9 +20,13 @@ class BaseGeometry:
             raise ValueError("{} must be greater than 0".format(name))
 
 
+""" this is a class with inheritance"""
+
+
 class Rectangle(BaseGeometry):
     """ This is class Rectangle inheriting from BaseGeometry"""
     def __init__(self, width, height):
+        """init"""
         self.__width = width
         self.__height = height
         self.integer_validator("width", width)
