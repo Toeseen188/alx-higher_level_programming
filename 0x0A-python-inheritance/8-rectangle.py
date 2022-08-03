@@ -4,9 +4,6 @@
 
 class BaseGeometry:
     """ This is an empty class"""
-    def __init__(self):
-        """ init"""
-        pass
 
     def area(self):
         """ This method raises an exceptions"""
