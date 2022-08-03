@@ -84,3 +84,6 @@ case #14:
 
 case #15:
      >>> bg.integer_validator("testing", 7)
+
+case #16
+	>>> bg.integer_validator("test", True)
