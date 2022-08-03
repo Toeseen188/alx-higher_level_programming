@@ -2,22 +2,7 @@
 """ A module containing an empty class"""
 
 
-class BaseGeometry:
-    """ This is an empty class"""
-
-    def area(self):
-        """ This method raises an exceptions"""
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """ public method to validate name and value"""
-        if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
-
-
-""" this is a class with inheritance"""
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
