@@ -21,6 +21,11 @@ success test
 	>>> print(my_list)
 	[1, 10, 19, 28, 37, 16]
 
+empty list
+============
+	>>> MyList([])
+	[]
+
 
 error test
 ==========
