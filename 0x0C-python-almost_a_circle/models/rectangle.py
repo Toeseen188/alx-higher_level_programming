@@ -17,6 +17,26 @@ class Rectangle(Base):
         self.__y = y
         super().__init__(id)
 
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        if width <= 0:
+            raise ValueError("width must be > 0")
+
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
+        if height <= 0:
+            raise ValueError("height must be > 0")
+
+        if type(x) is not int:
+            raise TypeError("x must be an integer")
+        if x < 0:
+            raise ValueError("x must be >= 0")
+
+        if type(y) is not int:
+            raise TypeError("y must be an integer")
+        if y < 0:
+            raise ValueError("y must be >= 0")
+
     @property
     def width(self):
         """ getter for width """
@@ -26,6 +46,11 @@ class Rectangle(Base):
     def width(self, width):
         """ setter method for width"""
         self.__width = width
+
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        if width <= 0:
+            raise ValueError("width must be > 0")
 
     @property
     def height(self):
@@ -37,6 +62,11 @@ class Rectangle(Base):
         """setter for method for height"""
         self.__height = height
 
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
+        if height <= 0:
+            raise ValueError("height must be > 0")
+
     @property
     def x(self):
         """getter method for x"""
@@ -46,6 +76,10 @@ class Rectangle(Base):
     def x(self, x):
         """ setter method for x"""
         self.__x = x
+        if type(x) is not int:
+            raise TypeError("x must be an integer")
+        if x < 0:
+            raise ValueError("x must be >= 0")
 
     @property
     def y(self):
@@ -56,3 +90,7 @@ class Rectangle(Base):
     def y(self, y):
         """setter method for y"""
         self.__y = y
+        if type(y) is not int:
+            raise TypeError("y must be an integer")
+        if y < 0:
+            raise ValueError("y must be >= 0")
