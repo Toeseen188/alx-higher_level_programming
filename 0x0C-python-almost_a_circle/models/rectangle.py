@@ -117,17 +117,31 @@ class Rectangle(Base):
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                 self.__x, self.__y, self.__width, self.__height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update with a no-keyword argument"""
-        if len(args) > 0:
-            for i in range(len(args)):
-                if i == 0:
-                    self.id = args[0]
-                if i == 1:
-                    self.__width = args[1]
-                if i == 2:
-                    self.__height = args[2]
-                if i == 3:
-                    self.__x = args[3]
-                if i == 4:
-                    self.__y = args[4]
+        if (args):
+            if len(args) > 0:
+                for i in range(len(args)):
+                    if i == 0:
+                        self.id = args[0]
+                    if i == 1:
+                        self.__width = args[1]
+                    if i == 2:
+                        self.__height = args[2]
+                    if i == 3:
+                        self.__x = args[3]
+                    if i == 4:
+                        self.__y = args[4]
+        else:
+            if len(kwargs) > 0:
+                for key in kwargs.keys():
+                    if key == "id":
+                        self.id = kwargs["id"]
+                    if key == "width":
+                        self.__width = kwargs["width"]
+                    if key == "height":
+                        self.__height = kwargs["height"]
+                    if key == "x":
+                        self.__x = kwargs["x"]
+                    if key == "y":
+                        self.__y = kwargs["y"]
