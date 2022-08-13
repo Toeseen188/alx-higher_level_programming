@@ -35,3 +35,35 @@ class Base:
             else:
                 list_dicts = [o.to_dictionary() for o in list_objs]
                 json_file.write(Base.to_json_string(list_dicts))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ convert from json to string"""
+        if json_string is None or []:
+            return "[]"
+        else:
+            return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all attributes already set"""
+        from models.rectangle import Rectangle
+        from models.square import Square
+        if dictionary is not None or not []:
+            if cls == Rectangle:
+                new_base = cls(1, 1)
+            if cls == Square:
+                new_base = cls(1)
+            new_base.update(**dictionary)
+            return new_base
+
+    @classmethod
+    def load_from_file(cls):
+        """return class method from file"""
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as json_file:
+                list_dicts = Base.from_json_string(json_file.read())
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
+            return []
