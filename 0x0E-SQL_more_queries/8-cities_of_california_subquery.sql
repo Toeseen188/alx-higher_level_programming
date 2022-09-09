@@ -7,7 +7,7 @@ Results must be sorted in ascending order by cities.id
 You are not allowed to use the JOIN keyword
 */
 SELECT id, name 
-FROM cities as c
+FROM cities AS c
 WHERE state_id IN(
 	SELECT id
 	FROM states
