@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /* print square using numbers of arg */
-const argvTwo = parseInt(process.argv[2]);
+const argvTwo = Number(process.argv[2]);
 let s;
 if (!argvTwo) {
   console.log('missing size');
