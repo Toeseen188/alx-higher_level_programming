@@ -3,7 +3,7 @@
 const argvTwo = Number(process.argv[2]);
 let s;
 if (!argvTwo) {
-  console.log('missing size');
+  console.log('Missing size');
 }
 for (let i = 0; i < argvTwo; i++) {
   s = '';
