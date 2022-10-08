@@ -3,6 +3,6 @@
 const rectangle = class Rectangle {
   constructor () {
     return 1;
-  };
-}
+  }
+};
 module.exports = rectangle;

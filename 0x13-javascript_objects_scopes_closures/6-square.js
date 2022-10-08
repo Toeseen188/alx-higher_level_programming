@@ -3,10 +3,7 @@
 const SquareInherit = require('./5-square');
 
 const square = class Square extends SquareInherit {
-  charPrint (c) {
-    if (c === undefined) {
-      c = 'X';
-    }
+  charPrint (c = 'X') {
     for (let i = 0; i < this.height; i++) {
       let s = '';
       for (let i = 0; i < this.width; i++) {
