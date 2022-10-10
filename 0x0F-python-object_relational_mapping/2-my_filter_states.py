@@ -11,8 +11,8 @@ if __name__ == "__main__":
                            passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
     cursor = conn.cursor()
     search = sys.argv[4]
-    q = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(search)
-    cursor.execute(q)
+    cursor.execute("""SELECT * FROM states WHERE name = "{}"
+                    ORDER BY id ASC""".format(search))
     states = cursor.fetchall()
     for state in states:
         print(state)
