@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-# a script that lists all cities from the database hbtn_0e_4_usa
+""" a script that lists all cities from the database hbtn_0e_4_usa
 # Usage: ./4-cities_by_state.py root root hbtn_0e_4_usa
+"""
 if __name__ == "__main__":
     import MySQLdb
     import sys

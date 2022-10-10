@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-# a script that lists all states from the database hbtn_0e_0_usa
+"""a script that lists all states from the database hbtn_0e_0_usa
 # where staetes starts with N
 # Usage: ./0-select_states.py root root hbtn_0e_0_usa
+"""
 if __name__ == "__main__":
     import MySQLdb
     import sys
