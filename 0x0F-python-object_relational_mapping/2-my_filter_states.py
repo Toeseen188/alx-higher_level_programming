@@ -11,7 +11,7 @@ if __name__ == "__main__":
                            passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
     cursor = conn.cursor()
     search = sys.argv[4]
-    cursor.execute("""SELECT * FROM states WHERE name = "{}"
+    cursor.execute("""SELECT * FROM states WHERE BINARY name = "{}"
                     ORDER BY id ASC""".format(search))
     states = cursor.fetchall()
     for state in states:
