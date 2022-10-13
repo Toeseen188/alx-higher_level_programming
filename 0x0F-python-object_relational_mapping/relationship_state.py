@@ -6,12 +6,10 @@ from Base. Link to the MySql table State
 # class attribute name that represents a column of a string with
     maximum 128 characters and can’t be null
 """
-from sqlalchemy import Column, Integer, String, MetaData
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
-
-mymetadata = MetaData()
-Base = declarative_base(metadata=mymetadata)
+from relationship_city import Base, City
 
 
 class State(Base):
