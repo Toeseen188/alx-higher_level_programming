@@ -13,9 +13,8 @@ import sys
 if __name__ == "__main__":
     url = sys.argv[1]
     r = requests.get(url)
-    s_code = r.status_code
 
-    if s_code >= 400:
+    if r.status_code != requests.codes.ok:
         print("Error code: {}".format(s_code))
     else:
         print(r.text)
