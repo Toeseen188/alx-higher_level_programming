@@ -18,7 +18,7 @@ import requests
 if __name__ == "__main__":
     data = {}
 
-    if len(sys.argv) <= 1:
+    if len(sys.argv) == 1:
         data['q'] = ""
     else:
         data['q'] = sys.argv[1]
