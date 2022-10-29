@@ -30,5 +30,5 @@ if __name__ == "__main__":
         else:
             print("[<{}>] <{}>".format(r_json.get('id'), r_json.get('name')))
 
-    except JSONDecodeError:
+    except Exception:
         print("Not a valid JSON")
