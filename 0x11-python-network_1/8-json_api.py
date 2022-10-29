@@ -16,12 +16,14 @@ import requests
 
 
 if __name__ == "__main__":
+    data = {}
 
-    if len(sys.argv) <= 1:
-        r = requests.post("http://0.0.0.0:5000/search_user", data={'q': ""})
+    if len(sys.argv) == 1:
+        data['q'] = ""
     else:
-        q = sys.argv[1]
-        r = requests.post("http://0.0.0.0:5000/search_user", data={'q': q})
+        data['q'] = sys.argv[1]
+
+    r = requests.post("http://0.0.0.0:5000/search_user", data=data)
 
     try:
         r_json = r.json()
@@ -30,5 +32,5 @@ if __name__ == "__main__":
         else:
             print("[<{}>] <{}>".format(r_json.get('id'), r_json.get('name')))
 
-    except Exception:
+    except JSONDecodeError:
         print("Not a valid JSON")
