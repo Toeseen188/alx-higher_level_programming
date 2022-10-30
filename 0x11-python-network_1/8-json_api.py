@@ -30,7 +30,7 @@ if __name__ == "__main__":
         if not r_json:
             print("No result")
         else:
-            print("[<{}>] <{}>".format(r_json.get('id'), r_json.get('name')))
+            print("[{}] {}".format(r_json.get('id'), r_json.get('name')))
 
     except Exception:
         print("Not a valid JSON")
