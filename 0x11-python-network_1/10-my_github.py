@@ -17,11 +17,10 @@ import requests
 
 
 if __name__ == "__main__":
-    user = sys.argv[1]
-    passw = sys.argv[2]
+    user = sys.argv[1]  # github username
+    passw = sys.argv[2]  # Access token
 
-    url = "https://api.github.com/users/{}".format(user)
+    url = "https://api.github.com/user"
 
     r = requests.get(url, auth=(user, passw))
-
     print(r.json().get('id'))
